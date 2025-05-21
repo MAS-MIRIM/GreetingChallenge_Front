@@ -1,0 +1,101 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #0B7D54;
+}
+
+.ranking-board {
+  color: white;
+  padding: 20px;
+  font-family: "Pretendard";
+  position: relative;
+}
+
+.ranking-title {
+  margin-top: 14%;
+  text-align: center;
+  color: #FCFCFC;
+  font-family: Pretendard;
+  font-size: clamp(32px, 6vw, 74px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin-bottom: 10%;
+}
+
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.5vw, 20px);
+  margin-bottom: 18%;
+}
+
+.ranking-item {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(60px, 10vw, 140px);
+  color: #FCFCFC;
+  font-family: Pretendard;
+  font-size: clamp(20px, 3vw, 48px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: clamp(32px, 12%, 100px);
+}
+
+.player-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(48px, 7vw, 100px);
+}
+
+.trophy {
+  position: absolute;
+  left: -2%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(48px, 7vw, 100px);
+  height: clamp(48px, 7vw, 100px);
+  aspect-ratio: 1/1;
+}
+
+.rank-number {
+  position: absolute;
+  left: -2%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(48px, 7vw, 100px);
+  height: clamp(48px, 7vw, 100px);
+  font-size: clamp(20px, 3vw, 48px);
+  font-weight: 700;
+  color: #FCFCFC;
+}
+
+.decor {
+  position: absolute;
+  left: 0;
+  width: 95vw; 
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decor.top {
+  margin-top: 5vh;
+  top: 0;
+  left: 50%; transform: translateX(-50%);
+}
+
+.decor.bottom {
+  margin-bottom: 5vh;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
