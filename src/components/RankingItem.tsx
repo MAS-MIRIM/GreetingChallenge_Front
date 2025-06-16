@@ -1,7 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import gold from '../assets/Gold.png';
 import silver from '../assets/Silver.png';
 import bronze from '../assets/Bronze.png';
+=======
+import gold from '/images/trophies/Gold.png';
+import silver from '/images/trophies/Silver.png';
+import bronze from '/images/trophies/Bronze.png';
+>>>>>>> master
 
 const trophies = [gold, silver, bronze];
 

@@ -1,0 +1,49 @@
+.floor-header {
+  width: 100vw;
+  height: 234px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floor-content {
+  width: 100vw;
+  height: calc(100vh - 234px);
+  margin-top: 234px;
+  overflow: hidden;
+  position: relative;
+}
+
+.floor-background {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  pointer-events: none;
+  will-change: left;
+}
+
+.floor-up-button {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.floor-up-image {
+  width: 200px;
+  height: 200px;
+  transition: transform 0.2s ease;
+}
+
+.floor-up-button:hover .floor-up-image {
+  transform: scale(1.05);
+}

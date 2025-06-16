@@ -1,0 +1,184 @@
+.ranking-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.ranking-board {
+  color: white;
+  background: #0B7D54;
+  border-radius: 27px;
+  padding: 30px 0 20px 0;
+  font-family: "Pretendard", sans-serif;
+  position: relative;
+  width: clamp(320px, 90vw, 600px);
+  height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.decor.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decor.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  display: block;
+  transform: rotate(180deg);
+}
+
+.ranking-title {
+  text-align: center;
+  color: #fcfcfc;
+  font-family: Pretendard, sans-serif;
+  font-size: clamp(24px, 5vw, 48px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin: 60px 0 40px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.5vw, 16px);
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 32px 40px 32px;
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  mask: linear-gradient(to bottom, 
+    transparent 0%,
+    black 30px,
+    black calc(100% - 50px), 
+    transparent 100%);
+  -webkit-mask: linear-gradient(to bottom, 
+    transparent 0%,
+    black 30px,
+    black calc(100% - 50px), 
+    transparent 100%);
+}
+
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fcfcfc;
+  font-family: Pretendard, sans-serif;
+  font-size: clamp(16px, 2.5vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: clamp(10px, 1.5vw, 16px) 0;
+  border-bottom: 1px solid rgba(252, 252, 252, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.ranking-item:last-child {
+  border-bottom: none;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 20px);
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.trophy {
+  width: clamp(32px, 5vw, 48px);
+  height: clamp(32px, 5vw, 48px);
+  flex-shrink: 0;
+}
+
+.rank-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(32px, 5vw, 48px);
+  height: clamp(32px, 5vw, 48px);
+  font-size: clamp(14px, 2vw, 24px);
+  font-weight: 700;
+  color: #fcfcfc;
+  background: rgba(252, 252, 252, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.score {
+  font-size: clamp(16px, 2.5vw, 32px);
+  font-weight: 700;
+  color: #fcfcfc;
+  position: relative;
+  z-index: 1;
+}
+
+.ranking-list {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.ranking-list::-webkit-scrollbar {
+  display: none;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fcfcfc;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #fcfcfc;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.error-message button {
+  background: rgba(252, 252, 252, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #fcfcfc;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.error-message button:hover {
+  background: rgba(252, 252, 252, 0.2);
+}
